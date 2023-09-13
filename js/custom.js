@@ -126,7 +126,7 @@
     }
        
     
-    // Prevent the form from being submitted if there are any errors
+   /* // Prevent the form from being submitted if there are any errors
     if((cfname || cfemail || cfcontact) == true) {
        return false;
     } else {
@@ -138,5 +138,5 @@
         
         // Display input data in a dialog box before submitting the form
         alert(dataPreview);
-    }
+    }*/
 };
