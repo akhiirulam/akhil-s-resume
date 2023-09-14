@@ -23,6 +23,7 @@
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
      
 
      <!-- MAIN CSS -->
@@ -69,7 +70,11 @@ https://www.tooplate.com/view/2120-ben-resume
                     </li>
 
                     <li class="nav-item">
-                      <a href="#myworks" class="nav-link smoothScroll">My Works</a>
+                      <a href="#skill" class="nav-link smoothScroll">Skill</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#faq" class="nav-link smoothScroll">FAQ</a>
                     </li>
 
                     <li class="nav-item">
@@ -231,22 +236,47 @@ https://www.tooplate.com/view/2120-ben-resume
           </div>
      </section>
 
-<!-- My Works -->
+<!-- Skill -->
 
-     <section class="about section-padding" id="myworks">
-      <div class="container">
-          <div class="row ml-4">
-
-            <iframe src="https://www.youtube.com/embed/8pUPOndEPCs"></iframe>
-            <iframe src="https://www.youtube.com/embed/8pUPOndEPCs"></iframe>
-            <iframe src="https://www.youtube.com/embed/8pUPOndEPCs"></iframe>
-            <iframe src="https://www.youtube.com/embed/8pUPOndEPCs"></iframe>
-          </div>
-      </div>
-  </section>
-
+<section class="d-flex flex-column align-items-center" id="skill">
+     <h2>My Skill Set</h2>
+          <div class="mb-lg-0">
+               <canvas id="myChart" style="width:1000px;max-width:600px" ></canvas>
+               <script>
+                    var xValues = ["C", "C++", "MERN", "DS", "Project Management","Scrum Master"];
+                    var yValues = [55, 60, 80, 44, 65, 70];
+                    var barColors = 
+                    [
+                         "#b91d47",
+                         "#00aba9",
+                         "#2b5797",
+                         "#e8c3b9",
+                         "#1e7145"
+                    ];
+  
+            new Chart("myChart", 
+               {
+                   type: "pie",
+                   data: 
+                   {
+                          labels: xValues,
+                          datasets: 
+                               [{
+                                      backgroundColor: barColors,
+                                      data: yValues
+                               }]
+                   },
+                   options: {
+                         title: {
+                                 display: true,
+                                }
+                             }
+  });
+  </script>
+  </div>
+</section>
      <!-- FAQ -->
-     <section class="faq section-padding">
+     <section class="faq section-padding" id="faq">
         
         <div class="container">
             
